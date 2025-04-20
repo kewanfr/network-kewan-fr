@@ -7,3 +7,8 @@ services:
       - "42602:80"            # Accès au site sur http://localhost:42602
     volumes:
       - ./src:/var/www/html  # Pour live‑reload de votre code en développement
+      - apache:/var/log/apache2 # Pour voir les logs d'Apache
+
+volumes:
+  apache:
+    name: apache
