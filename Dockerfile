@@ -17,7 +17,7 @@ RUN a2enmod remoteip headers proxy
 
 RUN printf "%s\n" \
   'RemoteIPHeader X-Forwarded-For' \
-  'RemoteIPTrustedProxy 0.0.0.0/0' \
+  'RemoteIPTrustedProxy 172.18.0.0/16' \
   'UseCanonicalName Off' \
   > /etc/apache2/conf-available/remoteip.conf \
   && a2enconf remoteip
