@@ -3,11 +3,23 @@ services:
   web:
     build: .
     container_name: network-kewan-fr
-    ports:
-      - "42602:80"            # Accès au site sur http://localhost:42602
+    # ports:
+    #   - "42602:80"            # Accès au site sur http://localhost:42602
     volumes:
       - ./src:/var/www/html  # Pour live‑reload de votre code en développement
       - apache:/var/log/apache2 # Pour voir les logs d'Apache
+    labels:
+      - "traefik.enable=true"
+      # adapte host() à ton domaine configuré dans Pangolin
+      - "traefik.http.routers.network-kewan-fr.rule=Host(`network.kewan.fr`)"
+      - "traefik.http.routers.network-kewan-fr.entrypoints=websecure"
+      - "traefik.http.routers.network-kewan-fr.tls=true"
+      # service interne exposé sur le port 80
+      - "traefik.http.services.network-kewan-fr.loadbalancer.server.port=80"
+networks:
+  default:
+    external:
+      name: pangolin
 
 volumes:
   apache:
