@@ -1,9 +1,11 @@
 
 services:
   web:
-    build: .
+    image: webdevops/php-apache:8.2
     container_name: network-kewan-fr
     ports:
       - "8082:80"            # Accès au site sur http://localhost:8082
     volumes:
-      - ./src:/var/www/html  # Pour live‑reload de votre code en développement
+      - ./src:/app  # Pour live‑reload de votre code en développement
+    environment:
+      - WEB_DOCUMENT_ROOT=/app
