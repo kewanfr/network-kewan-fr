@@ -13,9 +13,9 @@ COPY src/ /var/www/html/
 # Fixe les droits si besoin
 RUN chown -R www-data:www-data /var/www/html
 
-RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+# RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-RUN service apache2 restart
+# RUN service apache2 restart
 
 # Expose le port HTTP
 EXPOSE 80
