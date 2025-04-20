@@ -137,9 +137,9 @@ foreach ($machines as $machine) {
 <head>
   <meta charset="UTF-8">
   <title>Inventaire des machines</title>
-  <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
-  <script src="./src/js/script.js"></script>
+  <script src="./js/script.js"></script>
 </head>
 
 <body>
