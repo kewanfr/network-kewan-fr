@@ -1,0 +1,182 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f2f4f8;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+}
+
+h1,
+h2 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.machine {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #2f80ed;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.machine h3 {
+  margin: 0 0 0.5rem;
+  color: #2f80ed;
+}
+
+.service {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ddd;
+  margin-top: 0.5rem;
+}
+
+.domaine {
+  margin-left: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+.form-section {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+input[type=\"text\"],
+input[type=\"number\"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: #2f80ed;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1366d6;
+}
+
+.delete-link {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: #e63946;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.delete-link:hover {
+  color: #ff0000;
+}
+
+.toggle-edit {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.toggle-edit:hover {
+  color: #2f80ed;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.hidden {
+  display: none;
+}
+
+.domain-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.domain-block input[type=\"text\"] {
+  flex: 1;
+}
+
+.domain-block label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.inline-action {
+  background: none;
+  border: none;
+  color: #2f80ed;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-top: 8px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.inline-action:hover {
+  color: #1366d6;
+}
+
+.form-inline {
+  background: #f8f9fb;
+  border-left: 3px solid #2f80ed;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+}
+
+.edit-button,
+.delete-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #888;
+  padding: 0;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  color: #2f80ed;
+}
+
+.nolink {
+  text-decoration: none;
+}
